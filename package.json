@@ -5,12 +5,14 @@
   "author": "Joao Cardoso <jflc@ua.pt>",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --watch",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --watch",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@material/drawer": "^0.5.9",
+    "@material/layout-grid": "^0.23.0",
+    "@material/linear-progress": "^0.1.11",
     "@material/list": "^0.2.20",
     "@material/theme": "^0.4.0",
     "@material/toolbar": "^0.4.11",

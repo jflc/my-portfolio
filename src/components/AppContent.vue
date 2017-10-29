@@ -1,5 +1,12 @@
 <template>
   <div class="content">
+    <figure>
+
+      <figcaption>Skill Progress</figcaption>
+      <skill-progress id="mySkillProgress" :value="75"></skill-progress>
+
+    </figure>
+
     <img src="../assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
@@ -37,14 +44,22 @@
 </template>
 
 <script lang="babel">
+import SkillProgress from './SkillProgress.vue';
 
 export default {
   name: 'AppContent',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App Content'
+      msg: 'Welcome to Your AppContent.js App'
     }
-  }
+  },
+  mounted () {
+    let vm = this;
+  },
+  beforeDestroy () {
+    let vm = this;
+  },
+  components: {SkillProgress}
 }
 </script>
 

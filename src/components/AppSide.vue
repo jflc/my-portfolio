@@ -18,59 +18,81 @@
           <i class="fa fa-github fa-fw mdc-list-item__start-detail" aria-hidden="true"></i>jflc
         </a>
       </nav>
+    </div>
 
-      <hr class="mdc-list-divider">
+    <hr class="mdc-list-divider">
 
+    <div >
+      <h1 class="mdc-typography--headline">Tech Skills</h1>
+
+      <skill title="Back-end development" :rating="85">
+        <div>
+          <span><b>Languages: </b></span>
+          <span>Java, Python, C/C++, SQL, Bash/Shell script</span>
+        </div>
+        <div>
+          <span><b>Frameworks/Tools: </b></span>
+          <span>Java EE, JPA, Hibernate, Jackson, JUnit</span>
+        </div>
+      </skill>
+
+      <skill title="Front-end development" :rating="70">
+        <div>
+          <span><b>Languages: </b></span>
+          <span>Javascript, HTML, CSS</span>
+        </div>
+        <div>
+          <span><b>Frameworks/Tools: </b></span>
+          <span>jQuery, AngularJS, Bootstrap</span>
+        </div>
+      </skill>
+
+      <skill title="Database" :rating="75">
+        <div>
+          <span>Oracle, MySQL, PostgreSQL, MongoDB</span>
+        </div>
+      </skill>
+
+      <skill title="Operations" :rating="60">
+        <div>
+          <span>JBoss, Git, SVN, Google App Engine, OpenShift, Jenkins</span>
+        </div>
+      </skill>
+
+    </div>
+
+    <hr class="mdc-list-divider">
+
+    <div >
+      <h1 class="mdc-typography--headline">Soft Skills</h1>
       <div class="mdc-list-group">
-        <h3>Skills</h3>
         <ul class="mdc-list">
-          <li class="mdc-list-item">
-            <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">code</i>Back-end
-          </li>
+          <li class="mdc-list-item">Teamwork</li>
+          <li class="mdc-list-item">Problem solving</li>
+          <li class="mdc-list-item">Quick learner</li>
+          <li class="mdc-list-item">Creative thinking</li>
+          <li class="mdc-list-item">Time management</li>
         </ul>
       </div>
-
-      <hr class="mdc-list-divider">
-
-      <nav class="mdc-list">
-        <a class="mdc-list-item mdc-permanent-drawer--selected" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
-        </a>
-      </nav>
-
-      <hr class="mdc-list-divider">
-
-      <nav class="mdc-list">
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
-        </a>
-        <a class="mdc-list-item" href="#">
-          <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
-        </a>
-      </nav>
     </div>
+
   </nav>
 </template>
 
-<script>
+<script lang="babel">
+import Skill from './Skill.vue';
+
 export default {
   name: 'AppSide',
+  components: {Skill}
 }
 </script>
 
 <style lang="scss">
 @import '@material/drawer/mdc-drawer';
 @import '@material/list/mdc-list';
+
+.mdc-permanent-drawer {
+  width: 320px
+}
 </style>

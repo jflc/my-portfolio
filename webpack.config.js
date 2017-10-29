@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const nodeModulesPaths = glob.sync('node_modules').map((d) => path.join(__dirname, d));
+// const nodeModulesPaths = glob.sync('node_modules').map((d) => path.join(__dirname, d));
+const nodeModulesPaths = ['node_modules'];
 
 const extractSCSS = ExtractTextPlugin.extract({
    fallback: 'vue-style-loader',
@@ -20,23 +21,23 @@ const extractSCSS = ExtractTextPlugin.extract({
        }
      }
    ]
- })
+ });
 
- const extractSASS = ExtractTextPlugin.extract({
-    fallback: 'vue-style-loader',
-    use: [
-      {
-        loader: 'css-loader'
-      },
-      {
-        loader: 'sass-loader',
-        options: {
-          includePaths: nodeModulesPaths,
-          indentedSyntax: true
-        }
+const extractSASS = ExtractTextPlugin.extract({
+  fallback: 'vue-style-loader',
+  use: [
+    {
+      loader: 'css-loader'
+    },
+    {
+      loader: 'sass-loader',
+      options: {
+        includePaths: nodeModulesPaths,
+        indentedSyntax: true
       }
-    ]
-  })
+    }
+  ]
+});
 
 module.exports = {
   entry: './src/index.js',
@@ -92,7 +93,7 @@ module.exports = {
     new ExtractTextPlugin("style.css"),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: 'src/index.html',
       hash: true,
       inject: true,
       chunksSortMode: 'dependency'
@@ -105,7 +106,11 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: true,
+    overlay: true,
+    watchOptions: {
+      poll: true
+    }
   },
   performance: {
     hints: false
