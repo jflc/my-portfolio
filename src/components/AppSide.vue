@@ -89,6 +89,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@material/typography/mdc-typography";
+@import "@material/theme/mdc-theme";
 @import '@material/drawer/mdc-drawer';
 @import '@material/list/mdc-list';
 
