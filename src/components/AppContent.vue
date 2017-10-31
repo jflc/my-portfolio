@@ -193,8 +193,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@material/typography/mdc-typography";
-@import "@material/theme/mdc-theme";
+// @import "@material/typography/mdc-typography";
+// @import "@material/theme/mdc-theme";
+
 @import "@material/layout-grid/mdc-layout-grid";
 
 .content {
@@ -203,7 +204,7 @@ export default {
     flex: 1 1 auto;
 }
 
-h1 {
+.content h1 {
   text-align: center;
 }
 

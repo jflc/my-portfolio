@@ -31,6 +31,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+$mdc-theme-primary: #37474f;
+$mdc-theme-secondary: #546e7a;
+$mdc-theme-background: #fff;
+
 @import "@material/typography/mdc-typography";
 @import "@material/theme/mdc-theme";
 
