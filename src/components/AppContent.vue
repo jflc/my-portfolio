@@ -180,14 +180,62 @@ URL: http://hdl.handle.net/10773/11675
 </template>
 
 <script lang="babel">
+import SkillDetails from './SkillDetails.vue';
 
 export default {
   name: 'AppContent',
+  data() {
+    return {
+      languages: {
+        label: "Languages",
+        children: [{
+            label: "Java",
+            value: 70,
+          },
+          {
+            label: "Python",
+            value: 20
+          },
+          {
+            label: "C/C++",
+            value: 10
+          },
+        ]
+      },
+      frameworks: {
+        label: "Frameworks",
+        children: [{
+            label: "Java EE",
+            value: 20
+          },
+          {
+            label: "JPA",
+            value: 20
+          },
+          {
+            label: "Hibernate",
+            value: 20
+          },
+          {
+            label: "Jackson",
+            value: 20
+          },
+          {
+            label: "JUnit",
+            value: 20
+          }
+        ]
+      }
+    }
+  },
   mounted() {
     let vm = this;
   },
   beforeDestroy() {
     let vm = this;
+  },
+  components: {
+    SkillDetails
   }
 }
 </script>
@@ -195,7 +243,6 @@ export default {
 <style lang="scss">
 // @import "@material/typography/mdc-typography";
 // @import "@material/theme/mdc-theme";
-
 @import "@material/layout-grid/mdc-layout-grid";
 
 .content {
@@ -205,7 +252,6 @@ export default {
 }
 
 .content h1 {
-  text-align: center;
+    text-align: center;
 }
-
 </style>

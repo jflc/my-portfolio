@@ -25,7 +25,7 @@
   <div class="tech-skills">
     <h1 class="mdc-typography--headline mdc-typography-adjust-margin">Tech Skills</h1>
 
-    <skill title="Back-end development" :rating="85">
+    <skill title="Back-end development" :rating="85" :details="backendDetails">
       <div>
         <span><b>Languages: </b></span>
         <span>Java, Python, C/C++, SQL, Bash/Shell script</span>
@@ -36,7 +36,7 @@
       </div>
     </skill>
 
-    <skill title="Front-end development" :rating="70">
+    <skill title="Front-end development" :rating="70" :details="frontendDetails">
       <div>
         <span><b>Languages: </b></span>
         <span>Javascript, HTML, CSS</span>
@@ -47,13 +47,13 @@
       </div>
     </skill>
 
-    <skill title="Database" :rating="75">
+    <skill title="Database" :rating="75" :details="databaseDetails">
       <div>
         <span>Oracle, MySQL, PostgreSQL, MongoDB</span>
       </div>
     </skill>
 
-    <skill title="Operations" :rating="60">
+    <skill title="Operations" :rating="60" :details="operationsDetails">
       <div>
         <span>JBoss, Git, SVN, Google App Engine, OpenShift, Jenkins</span>
       </div>
@@ -82,6 +82,156 @@ import Skill from './Skill.vue';
 
 export default {
   name: 'AppSide',
+  data() {
+    return {
+      backendDetails: [{
+          label: "Languages",
+          class: "mdc-theme--primary-light",
+          children: [
+            {
+              label: "Java",
+              value: 35,
+            },
+            {
+              label: "SQL",
+              value: 20,
+            },
+            {
+               label: "Bash/Shell",
+               value: 20
+            },
+            {
+              label: "Python",
+              value: 15
+            },
+            {
+              label: "C/C++",
+              value: 10
+            }
+          ]
+        },
+        {
+          label: "Frameworks",
+          class: "mdc-theme--secondary-light",
+          children: [
+            {
+              label: "Java EE",
+              value: 25
+            },
+            {
+              label: "JPA",
+              value: 20
+            },
+            {
+              label: "Jackson",
+              value: 20
+            },
+            {
+              label: "JUnit",
+              value: 20
+            },
+            {
+              label: "Hibernate",
+              value: 15
+            }
+          ]
+        }
+      ],
+      frontendDetails: [{
+          label: "Languages",
+          class: "mdc-theme--primary-light",
+          children: [
+            {
+              label: "JavaScript",
+              value: 40,
+            },
+            {
+              label: "HTML",
+              value: 35,
+            },
+            {
+               label: "CSS",
+               value: 25
+            }
+          ]
+        },
+        {
+          label: "Frameworks",
+          class: "mdc-theme--secondary-light",
+          children: [
+            {
+              label: "jQuery",
+              value: 25
+            },
+            {
+              label: "AngularJS",
+              value: 30
+            },
+            {
+              label: "Bootstrap",
+              value: 25
+            },
+            {
+              label: "Vue.js",
+              value: 20
+            }
+          ]
+        }
+      ],
+      databaseDetails: [{
+          class: "mdc-theme--primary-light",
+          children: [
+            {
+              label: "Oracle",
+              value: 35,
+            },
+            {
+              label: "MySQL",
+              value: 25,
+            },
+            {
+               label: "PostgreSQL",
+               value: 25
+            },
+            {
+               label: "MongoDB",
+               value: 15
+            }
+          ]
+        },
+      ],
+      operationsDetails: [{
+          class: "mdc-theme--secondary-light",
+          children: [
+            {
+              label: "JBoss",
+              value: 15,
+            },
+            {
+              label: "Git",
+              value: 25,
+            },
+            {
+               label: "SVN",
+               value: 25
+            },
+            {
+               label: "Google App Engine",
+               value: 10
+            },
+            {
+               label: "OpenShift",
+               value: 10
+            },
+            {
+               label: "Jenkins",
+               value: 15
+            }
+          ]
+        },
+      ]
+    }
+  },
   components: {
     Skill
   }
@@ -102,7 +252,7 @@ export default {
     height: 0;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    margin: 16px 0px;
+    margin: 16px 0;
 }
 
 .tech-skills {
@@ -112,4 +262,29 @@ export default {
 .soft-skills {
     margin: 0 16px;
 }
+
+.mdc-theme--primary svg .node.node-circle circle{
+  fill: var(--mdc-theme-primary);
+}
+
+.mdc-theme--primary svg .node.node-circle text{
+  fill: var(--mdc-theme-text-primary-on-primary);
+}
+
+.mdc-theme--primary svg .node.node-label text{
+  fill: var(--mdc-theme-primary);
+}
+
+.mdc-theme--secondary svg .node.node-circle circle{
+  fill: var(--mdc-theme-secondary);
+}
+
+.mdc-theme--secondary svg .node.node-circle text{
+  fill: var(--mdc-theme-text-primary-on-secondary);
+}
+
+.mdc-theme--secondary svg .node.node-label text{
+  fill: var(--mdc-theme-secondary);
+}
+
 </style>

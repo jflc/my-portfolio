@@ -17,6 +17,7 @@
     "@material/theme": "^0.4.0",
     "@material/toolbar": "^0.4.11",
     "@material/typography": "^0.3.0",
+    "d3": "^4.11.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
