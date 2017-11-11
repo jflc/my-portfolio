@@ -15,11 +15,14 @@
 import {MDCLinearProgress, MDCLinearProgressFoundation} from '@material/linear-progress';
 
 export default {
-  name: 'SkillsProgress',
+  name: 'ProgressBar',
   props: {
     value: {
       type: Number,
-      required: true
+      required: true,
+      validator(val) {
+        return val <= 100;
+      }
     }
   },
   mounted() {

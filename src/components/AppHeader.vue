@@ -117,8 +117,9 @@ export default {
 }
 
 .mdc-toolbar--flexible-space-minimized .toolbar-avatar img {
-    width: 1em;
-    height: 1em;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #000;
 }
 
 </style>

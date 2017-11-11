@@ -180,7 +180,6 @@ URL: http://hdl.handle.net/10773/11675
 </template>
 
 <script lang="babel">
-import SkillDetails from './SkillDetails.vue';
 
 export default {
   name: 'AppContent',
@@ -233,9 +232,6 @@ export default {
   },
   beforeDestroy() {
     let vm = this;
-  },
-  components: {
-    SkillDetails
   }
 }
 </script>

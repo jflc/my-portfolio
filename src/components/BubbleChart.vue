@@ -6,7 +6,7 @@
 import * as d3 from "d3";
 
 export default {
-  name: 'SkillDetails',
+  name: 'BubbleChart',
   props: {
     data: {
       type: Object,
@@ -47,7 +47,7 @@ export default {
       .padding(vm.padding);
 
     let root = d3.hierarchy(vm.data)
-      .sum((d) => d.value)
+      .sum((d) => d.value || 1)
       // .sort((a, b) => a.value - b.value)
       .each((d) => {
         d.text = d.data.label;
@@ -55,10 +55,10 @@ export default {
       });
     console.log('root: ', root);
 
-    // pack = pack(root);
-    // let data = root.children;
     let nodes = pack(root).leaves();
-    root.r = root.r + vm.padding - d3.max(nodes, d => d.r);
+    root.radial = root.r / 2;
+    root.r = root.r - d3.max(nodes, d => d.r);
+
     console.log('nodes: ', nodes);
 
     // use the force
@@ -66,14 +66,14 @@ export default {
       // .velocityDecay(0.1)
       // .alpha(0.5)
       // .force('link', d3.forceLink().id(d => d.id))
-      .force('charge', d3.forceManyBody())
-      // .force('charge', d3.forceManyBody().strength(d => -vm.strength * Math.pow(d.r, 2.0)))
+      // .force('charge', d3.forceManyBody())
+      .force('charge', d3.forceManyBody().strength(d => -vm.strength * Math.pow(d.r, 2.0)))
       // .force('charge', d3.forceManyBody().strength(-10).distanceMin(10))
       // .force("center", d3.forceCenter(center.x, center.y))
       .force('collide', d3.forceCollide(d => d.r))
       // .force('collide', d3.forceCollide(d => d.r + vm.padding))
       // .force('center', d3.forceCenter())
-      .force('center', d3.forceRadial(root.r, root.x, root.y))
+      .force('center', d3.forceRadial(root.radial, root.x, root.y))
       // .force('center', d3.forceRadial(root.r, center.x, center.y).strength(vm.strength))
       // .force('x', d3.forceX(center.x).strength(strength))
       // .force('y', d3.forceY(center.y).strength(strength));
