@@ -1,100 +1,9 @@
 <template>
 <div class="content">
 
-  <div>
-    <h1 class="mdc-typography--display1 mdc-theme--text-secondary-on-light">Work Experience</h1>
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-          <span>07/2014 - Present</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
-          <div>
-            <span>Java Developer</span>
-          </div>
-          <div>
-            <a href="https://www.siemens.com">Siemens S.A.</a>
-          </div>
-          <div>
-            <span>
-              Design, develop, test and deploy internal web applications used by Siemens employees all over the world.
-            </span>
-          </div>
-          <div>
-            <span>
-              Main projects:
-Delegation Management: System responsible for manage all
-delegations inside the company on all stages like order approval,
-income calculation, visa process, repatriation, etc;
-Template Management: SaaS application responsible for manage
-email and document templates, proving dynamic document/email
-generation to all Siemens application through REST API;
-Basic Components: Set of common back-end components used in all
-internal applications;
-Web Components: Collaborative project between internal and
-external services, providing a framework used to build modern UI for
-web/mobile applications.
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-          <span>07/2013 - 06/2014</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
-          <div>
-            <span>Researcher</span>
-          </div>
-          <div>
-            <a href="https://www.it.pt">IT - Institute of Telecommunications (University of Aveiro)</a>
-          </div>
-          <div>
-            <span>
-              Designing and developing a ANDSF component belonging to the Evolved
-Packet Core (EPC) framework from 3GPP, deploy and integration of
-Hotspot 2.0, and making a seamless handover between 3G and WiFi
-technologies.
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <work-experience></work-experience>
 
-  <hr />
-
-  <div>
-    <h1 class="mdc-typography--display1 mdc-theme--text-secondary-on-light">Education</h1>
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
-          <span>09/2007 - 06/2013</span>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
-          <div>
-            <span>Master's Degree in Computer Engineering and Telematics</span>
-          </div>
-          <div>
-            <a href="http://www.ua.pt">University Of Aveiro</a>
-          </div>
-          <div>
-            <span>
-              Master’s Thesis:
-Title: DETIboot
-Supervisors: Dr. José Manuel Neto Vieira, Dr. André Ventura da Cruz
-Marmôto Zúquete
-Description: Fast, wireless installation of pre-configured operating
-systems, with broadcast transmission and network coding (fountain
-codes), making it scalable for an unlimited number of consumer
-systems
-URL: http://hdl.handle.net/10773/11675
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <education></education>
 
   <hr />
 
@@ -180,51 +89,13 @@ URL: http://hdl.handle.net/10773/11675
 </template>
 
 <script lang="babel">
+import WorkExperience from "./WorkExperience.vue";
+import Education from "./Education.vue";
 
 export default {
   name: 'AppContent',
   data() {
     return {
-      languages: {
-        label: "Languages",
-        children: [{
-            label: "Java",
-            value: 70,
-          },
-          {
-            label: "Python",
-            value: 20
-          },
-          {
-            label: "C/C++",
-            value: 10
-          },
-        ]
-      },
-      frameworks: {
-        label: "Frameworks",
-        children: [{
-            label: "Java EE",
-            value: 20
-          },
-          {
-            label: "JPA",
-            value: 20
-          },
-          {
-            label: "Hibernate",
-            value: 20
-          },
-          {
-            label: "Jackson",
-            value: 20
-          },
-          {
-            label: "JUnit",
-            value: 20
-          }
-        ]
-      }
     }
   },
   mounted() {
@@ -232,7 +103,8 @@ export default {
   },
   beforeDestroy() {
     let vm = this;
-  }
+  },
+  components: {WorkExperience, Education}
 }
 </script>
 
@@ -243,11 +115,11 @@ export default {
 
 .content {
     padding: 16px;
-    background: rgba(0,0,0,.05);
+    background: #efefef;
     flex: 1 1 auto;
 }
 
 .content h1 {
-    text-align: center;
+    // text-align: center;
 }
 </style>

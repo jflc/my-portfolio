@@ -39,6 +39,10 @@ $mdc-theme-background: #fff;
 @import "@material/typography/mdc-typography";
 @import "@material/theme/mdc-theme";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0;
