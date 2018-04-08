@@ -3,17 +3,19 @@
 
   <work-experience></work-experience>
 
+  <br />
+
   <education></education>
 
   <hr />
 
   <certifications></certifications>
 
-  <hr />
+  <br />
 
   <personal-projects></personal-projects>
 
-  <hr />
+  <br />
 
   <academic-projects></academic-projects>
 

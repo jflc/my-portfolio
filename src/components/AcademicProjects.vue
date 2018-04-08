@@ -31,7 +31,7 @@ export default {
         {
           title: "UAccess Control",
           subTitle: "(C/Python)",
-          description: "Web application for control and monitor the building users access using citizen cards."
+          description: "Web application to control and monitor the building users access using citizen cards."
         }
       ]
     }
