@@ -1,12 +1,12 @@
 <template>
 <div class="tech-skills">
-  <h1 class="mdc-typography--headline mdc-typography-adjust-margin">Tech Skills</h1>
+  <h1 class="mdc-typography--title">Tech Skills</h1>
   <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner mdc-typography--caption mdc-theme--primary" v-for="ts in techSkills.children">
+    <div class="mdc-layout-grid__inner mdc-theme--primary" v-for="ts in techSkills.children">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2 class="mdc-typography--title " v-text="ts.label"></h2>
+        <h2 class="mdc-typography--subheading2" v-text="ts.label"></h2>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4" v-for="item in ts.children">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-typography--caption" v-for="item in ts.children">
         <span v-text="item.label"></span>
         <progress-bar :value="item.value"></progress-bar>
       </div>
@@ -132,7 +132,7 @@ export default {
     margin: 0 16px;
 }
 
-.tech-skills .mdc-typography--headline {
+.tech-skills .mdc-typography--title {
     text-align: center;
 }
 

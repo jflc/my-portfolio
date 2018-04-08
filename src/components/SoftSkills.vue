@@ -1,6 +1,6 @@
 <template>
   <div class="soft-skills">
-    <h1 class="mdc-typography--headline mdc-typography-adjust-margin">Soft Skills</h1>
+    <h1 class="mdc-typography--title">Soft Skills</h1>
     <div class="mdc-typography--caption">
       <bubble-chart :data="softSkills"></bubble-chart>
     </div>
@@ -47,7 +47,7 @@ export default {
     margin: 0 16px;
 }
 
-.soft-skills .mdc-typography--headline {
+.soft-skills .mdc-typography--title {
     text-align: center;
 }
 </style>

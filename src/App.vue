@@ -53,4 +53,32 @@ body {
   font-size: 24px;
 }
 
+/* The card content */
+.mdc-card {
+  word-break: break-word;
+}
+
+.mdc-card__primary {
+  padding: 16px;
+}
+
+.mdc-card__secondary {
+  padding: 16px;
+}
+
+.mdc-card__title {
+  @extend .mdc-typography--title;
+  margin: 0px;
+}
+
+.mdc-card__subtitle {
+  @extend .mdc-typography--subheading1;
+  margin: 0px;
+}
+
+.mdc-card__description {
+  @extend .mdc-typography--body1;
+  margin: 0px;
+}
+
 </style>

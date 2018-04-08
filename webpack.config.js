@@ -1,43 +1,37 @@
 const path = require('path');
-const glob = require('glob');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-// const nodeModulesPaths = glob.sync('node_modules').map((d) => path.join(__dirname, d));
 const nodeModulesPaths = ['node_modules'];
 
-const extractSCSS = ExtractTextPlugin.extract({
-   fallback: 'vue-style-loader',
-   use: [
-     {
-       loader: 'css-loader'
-     },
-     {
-       loader: 'sass-loader',
-       options: {
-         includePaths: nodeModulesPaths
-       }
-     }
-   ]
- });
+const cssLoaders = [
+  {loader: 'vue-style-loader'},
+  {loader: 'css-loader'},
+];
 
-const extractSASS = ExtractTextPlugin.extract({
-  fallback: 'vue-style-loader',
-  use: [
-    {
-      loader: 'css-loader'
-    },
-    {
-      loader: 'sass-loader',
-      options: {
-        includePaths: nodeModulesPaths,
-        indentedSyntax: true
-      }
+const scssLoaders = [
+  {loader: 'vue-style-loader'},
+  {loader: 'css-loader'},
+  {
+    loader: 'sass-loader',
+    options: {
+      includePaths: nodeModulesPaths
     }
-  ]
-});
+  }
+];
+
+const sassLoaders = [
+  {loader: 'vue-style-loader'},
+  {loader: 'css-loader'},
+  {
+    loader: 'sass-loader',
+    options: {
+      includePaths: nodeModulesPaths,
+      indentedSyntax: true
+    }
+  }
+];
 
 module.exports = {
   entry: './src/index.js',
@@ -48,8 +42,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: cssLoaders,
+      },
+      {
         test: /\.scss$/,
-        use: extractSCSS
+        use: scssLoaders
+      },
+      {
+        test: /\.sass$/,
+        use: sassLoaders
       },
       {
         test: /\.vue$/,
@@ -61,8 +63,8 @@ module.exports = {
             // other preprocessors should work out of the box, no loader config like this necessary.
             //'scss': 'vue-style-loader!css-loader!sass-loader',
             //'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-            'scss': extractSCSS,
-            'sass': extractSASS
+            'scss': scssLoaders,
+            'sass': sassLoaders
 
           }
           // other vue-loader options go here
@@ -90,7 +92,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new ExtractTextPlugin("style.css"),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
@@ -102,7 +103,8 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
-    }
+    },
+    extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,

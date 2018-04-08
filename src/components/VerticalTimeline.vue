@@ -10,11 +10,11 @@
     <div class="vertical-timeline-content">
       <div class="mdc-card">
         <section class="mdc-card__primary">
-          <h1 class="mdc-card__title mdc-card__title--large" v-html="item.title"></h1>
+          <h1 class="mdc-card__title" v-html="item.title"></h1>
           <h2 class="mdc-card__subtitle" v-html="item.subTitle"></h2>
         </section>
-        <section class="mdc-card__supporting-text">
-          <div v-html="item.description"></div>
+        <section class="mdc-card__secondary">
+          <div class="mdc-card__description" v-html="item.description"></div>
         </section>
       </div>
     </div>
@@ -56,8 +56,7 @@ export default {
     width: 0;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 90px;
     margin: 0 auto;
     border: 2px dashed var(--mdc-theme-secondary);
 }
@@ -66,31 +65,17 @@ export default {
 .vertical-timeline-item {
     display: flex;
     align-items: stretch;
-    padding: 40px;
-}
-
-.vertical-timeline-item:nth-child(odd) {
     flex-direction: row;
-}
-
-.vertical-timeline-item:nth-child(even) {
-    flex-direction: row-reverse;
+    padding: 40px 0px;
 }
 
 /* The container date */
 .vertical-timeline-date {
-    flex: 1 0 0;
+    min-width: 70px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.vertical-timeline-item:nth-child(odd) .vertical-timeline-date {
     text-align: right;
-}
-
-.vertical-timeline-item:nth-child(even) .vertical-timeline-date {
-    text-align: left;
 }
 
 /* The container mark */
@@ -99,7 +84,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0 40px;
+    margin: 0 20px;
     width: 4px;
     background: var(--mdc-theme-secondary);
     z-index: 1;
@@ -130,8 +115,31 @@ export default {
     flex: 1 0 0;
 }
 
-/* The content card */
-.vertical-timeline-content .mdc-card {
-    background-color: white;
+/* timeline at the middle */
+@media (min-width: 1024px) {
+  .vertical-timeline::after {
+      right: 90px;
+  }
+
+  .vertical-timeline-item {
+      padding: 40px 20px;
+  }
+
+  .vertical-timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+  }
+
+  .vertical-timeline-date {
+      flex: 1 0 0;
+  }
+
+  .vertical-timeline-item:nth-child(even) .vertical-timeline-date {
+      text-align: left;
+  }
+
+  .vertical-timeline-mark {
+      margin: 0 40px;
+  }
 }
+
 </style>

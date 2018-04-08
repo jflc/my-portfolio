@@ -1,5 +1,5 @@
 <template>
-<div class="mdc-permanent-drawer">
+<div class="app-side mdc-drawer mdc-drawer--permanent">
   <personal-info></personal-info>
   <hr />
   <tech-skills></tech-skills>
@@ -34,11 +34,11 @@ export default {
 @import '@material/drawer/mdc-drawer';
 
 
-.mdc-permanent-drawer {
+.app-side {
     width: 320px;
 }
 
-.mdc-permanent-drawer hr {
+.app-side hr {
     height: 0;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
