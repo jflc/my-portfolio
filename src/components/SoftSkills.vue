@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss">
 .soft-skills {
+    page-break-inside: avoid;
     margin: 0 16px;
 }
 

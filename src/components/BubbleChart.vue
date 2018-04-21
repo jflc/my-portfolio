@@ -14,7 +14,7 @@ export default {
     },
     aspectRatio: {
       type: Number,
-      default: 4 / 3,
+      default: 4 / 3
     },
     padding: {
       type: Number,
@@ -32,6 +32,9 @@ export default {
         .attr('r', d => d.r);
     }
   },
+  beforeUpdate() {
+    console.log("beforeUpdate")
+  },
   mounted() {
     let vm = this;
 
@@ -39,8 +42,12 @@ export default {
       height = width / vm.aspectRatio;
 
     vm.svg = d3.select(vm.$el).append("svg")
-      .attr("width", width)
-      .attr("height", height);
+      .attr("width", '100%')
+      .attr("height", '100%')
+      .attr('viewBox','0 0 '+ width +' '+ height )
+      .attr('preserveAspectRatio','xMinYMin')
+      //.attr("width", width)
+      //.attr("height", height);
 
     let pack = d3.pack()
       .size([width, height])
@@ -96,6 +103,7 @@ export default {
       .attr("r", (d) => d.r);
 
     leaf.append("text")
+      .attr("class", "mdc-typography--subheading2")
       .text((d) => d.text);
 
     leaf.exit().remove();

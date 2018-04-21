@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style lang="scss">
+.education {
+  page-break-inside: avoid;
+}
+
 .education > h1.mdc-typography--display1 {
   text-align: center;
 }

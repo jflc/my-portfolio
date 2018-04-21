@@ -48,5 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+.academic-projects {
+  page-break-inside: avoid;
+}
 </style>

@@ -116,7 +116,7 @@ export default {
 }
 
 /* timeline at the middle */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .vertical-timeline::after {
       right: 90px;
   }

@@ -129,6 +129,7 @@ export default {
 
 <style lang="scss">
 .tech-skills {
+    page-break-inside: avoid;
     margin: 0 16px;
 }
 

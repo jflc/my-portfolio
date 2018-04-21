@@ -1,11 +1,7 @@
 <template>
   <div id="app">
     <app-header></app-header>
-
     <app-main></app-main>
-
-    <footer>
-    </footer>
   </div>
 </template>
 
@@ -79,6 +75,17 @@ body {
 .mdc-card__description {
   @extend .mdc-typography--body1;
   margin: 0px;
+}
+
+@media print {
+	.page-break-on-print	{
+    display: block;
+    page-break-before: always;
+  }
+
+  .hide-on-print	{
+    visibility: hidden;
+  }
 }
 
 </style>

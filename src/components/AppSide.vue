@@ -33,11 +33,6 @@ export default {
 // @import "@material/theme/mdc-theme";
 @import '@material/drawer/mdc-drawer';
 
-
-.app-side {
-    width: 320px;
-}
-
 .app-side hr {
     height: 0;
     border: none;
@@ -45,4 +40,9 @@ export default {
     margin: 16px 0;
 }
 
+@media (min-width: 1025px) {
+  .app-side {
+      width: 320px;
+  }
+}
 </style>

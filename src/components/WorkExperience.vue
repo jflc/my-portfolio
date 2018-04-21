@@ -42,6 +42,10 @@ export default {
 </script>
 
 <style lang="scss">
+.work-experience {
+  page-break-inside: avoid;
+}
+
 .work-experience > h1.mdc-typography--display1 {
   text-align: center;
 }

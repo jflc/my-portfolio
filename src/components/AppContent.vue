@@ -7,7 +7,7 @@
 
   <education></education>
 
-  <hr />
+  <hr class="page-break-on-print hide-on-print"/>
 
   <certifications></certifications>
 

@@ -38,5 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+.personalProjects {
+  page-break-inside: avoid;
+}
 </style>

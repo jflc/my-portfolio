@@ -1,5 +1,5 @@
 <template>
-<header v-on:MDCToolbar:change="updateData" class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-default-behavior mdc-toolbar--flexible-space-maximized">
+<header v-on:MDCToolbar:change="updateData" class="app-header mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-default-behavior mdc-toolbar--flexible-space-maximized">
   <div class="mdc-toolbar__row">
     <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
       <div class="mdc-toolbar__title">
@@ -15,8 +15,7 @@
       </div>
     </section>
     <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-      <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
-      <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Print this page" alt="Print this page">print</a>
+      <a href="/cv.pdf" class="hide-on-print material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
     </section>
   </div>
 </header>
@@ -62,6 +61,12 @@ export default {
 
 <style lang="scss">
 @import '@material/toolbar/mdc-toolbar';
+
+@media print {
+  .app-header {
+    position: absolute;
+  }
+}
 
 .toolbar-avatar {
     display: flex;

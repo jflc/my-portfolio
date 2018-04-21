@@ -45,4 +45,8 @@ export default {
 
 <style lang="scss">
 @import '@material/list/mdc-list';
+
+.personal-info {
+  page-break-inside: avoid;
+}
 </style>
