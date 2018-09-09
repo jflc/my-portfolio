@@ -38,7 +38,5 @@ export default {
 </script>
 
 <style lang="scss">
-.certifications {
-  page-break-inside: avoid;
-}
+
 </style>

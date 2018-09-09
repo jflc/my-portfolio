@@ -14,6 +14,12 @@ export default {
     return {
       workExperience: [
         {
+          startPoint: "Jan 2018",
+          title: "Software Engineer",
+          subTitle: '<a href="https://www.mercedes-benz.io/" target="_blank">Mercedes-Benz.io</a>',
+          description: '<p>Design, develop, test and deploy Mercedes-Benz digital products.</p><p>Main projects:</p><ul><li>Search Engine: Microservice that provides an API that gives the possibility to other systems store search query and notify the users every time that new entries are available;</li></ul>'
+        },
+        {
           startPoint: "Jul 2014",
           endPoint: "Dez 2017",
           title: 'Java Developer',
@@ -42,7 +48,5 @@ export default {
 </script>
 
 <style lang="scss">
-.work-experience {
-  page-break-inside: avoid;
-}
+
 </style>

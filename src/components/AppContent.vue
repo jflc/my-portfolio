@@ -1,23 +1,23 @@
 <template>
 <div class="content">
 
-  <work-experience></work-experience>
+  <work-experience class="content-item"></work-experience>
 
   <br />
 
-  <education></education>
+  <education class="content-item"n></education>
 
-  <hr class="page-break-on-print hide-on-print"/>
+  <hr />
 
-  <certifications></certifications>
-
-  <br />
-
-  <personal-projects></personal-projects>
+  <certifications class="content-item"></certifications>
 
   <br />
 
-  <academic-projects></academic-projects>
+  <personal-projects class="content-item"></personal-projects>
+
+  <br />
+
+  <academic-projects class="content-item"></academic-projects>
 
 </div>
 </template>
@@ -48,9 +48,17 @@ export default {
 <style lang="scss">
 
 .content {
-    padding: 16px;
     background: #efefef;
     flex: 1 1 auto;
+}
+
+.content > .content-item {
+    padding: 16px;
+    page-break-inside: avoid;
+}
+
+.content > hr {
+  margin: 16px;
 }
 
 </style>
