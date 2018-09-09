@@ -1,5 +1,5 @@
 <template>
-  <main class="mdc-toolbar-fixed-adjust">
+  <main class="app-main">
     <app-side></app-side>
     <app-content></app-content>
   </main>

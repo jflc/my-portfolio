@@ -1,6 +1,6 @@
 <template>
   <div class="certifications">
-    <h1 class="mdc-typography--display1 mdc-theme--text-secondary-on-light">Certifications</h1>
+    <h1 class="content-title">Certifications</h1>
     <card-grid :data="certifications"></card-grid>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="academic-projects">
-    <h1 class="mdc-typography--display1 mdc-theme--text-secondary-on-light">Academic Projects</h1>
+    <h1 class="content-title">Academic Projects</h1>
     <card-grid :data="academicProjects"></card-grid>
   </div>
 </template>

@@ -5,13 +5,13 @@
       <div class="mdc-toolbar__title">
         <div class="toolbar-avatar">
           <img src="../assets/avatar.png" v-bind:style="{ opacity:  imgOpacity, margin: imgMargin }" />
-          <span v-bind:style="{ margin:  nameMargin }">João Cardoso</span>
         </div>
       </div>
     </section>
     <section class="mdc-toolbar__section">
-      <div class="mdc-toolbar__title toolbar-job-title">
-        <span v-bind:style="{ opacity:  jobOpacity }">Software Engineer</span>
+      <div class="mdc-toolbar__title toolbar-job-title" >
+        <h3 class="mdc-typography--headline6" v-bind:style="{ margin:  nameMargin, fontSize: titleSize }">João Cardoso</h3>
+        <div class="mdc-typography--subtitle1" v-bind:style="{ opacity:  jobOpacity, fontSize: subtitleSize }">Software Engineer</div>
       </div>
     </section>
     <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
@@ -34,7 +34,9 @@ export default {
       imgOpacity: 1,
       imgMargin: '1em auto',
       nameMargin: 'auto 0em',
-      jobOpacity: 1
+      jobOpacity: 1,
+      titleSize: `${MDCToolbarFoundation.numbers.MAX_TITLE_SIZE}rem`,
+      subtitleSize: `${MDCToolbarFoundation.numbers.MAX_TITLE_SIZE*0.6}rem`
     };
   },
   methods: {
@@ -43,14 +45,20 @@ export default {
       const flexibleExpansionRatio = event.detail.flexibleExpansionRatio;
       vm.imgOpacity = flexibleExpansionRatio > 0 && flexibleExpansionRatio < 1 ? flexibleExpansionRatio : 1;
       vm.imgMargin = flexibleExpansionRatio +'em auto';
-      vm.nameMargin = 'auto ' +  (1-flexibleExpansionRatio) + 'em';
+      vm.nameMargin = (0.5*flexibleExpansionRatio) + 'em auto';
       vm.jobOpacity = flexibleExpansionRatio;
+      const maxTitleSize = MDCToolbarFoundation.numbers.MAX_TITLE_SIZE;
+      const minTitleSize = MDCToolbarFoundation.numbers.MIN_TITLE_SIZE;
+      const currentTitleSize = (maxTitleSize - minTitleSize) * flexibleExpansionRatio + minTitleSize;
+      const currentSubtitleSize = currentTitleSize * 0.6;
+      vm.titleSize = `${currentTitleSize}rem`;
+      vm.subtitleSize = `${currentSubtitleSize}rem`;
     }
   },
   mounted() {
     let vm = this;
     vm.headerToolbar = new MDCToolbar(vm.$el);
-    vm.headerToolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+    vm.headerToolbar.fixedAdjustElement = document.querySelector('.app-main');
   },
   beforeDestroy() {
     let vm = this;
@@ -66,6 +74,10 @@ export default {
   .app-header {
     position: absolute;
   }
+}
+
+.app-header {
+  z-index: 10;
 }
 
 .toolbar-avatar {
@@ -84,6 +96,7 @@ export default {
 }
 
 .toolbar-job-title {
+    text-align: center;
     margin: auto;
 }
 
@@ -113,12 +126,15 @@ export default {
     color: var(--mdc-theme-text-icon-on-background);
 }
 
-.mdc-toolbar--flexible-space-minimized .toolbar-job-title {
-    display: none;
-}
+//.mdc-toolbar--flexible-space-minimized .toolbar-job-title {
+//    display: none;
+//}
 
 .mdc-toolbar--flexible-space-minimized .toolbar-avatar {
     flex-direction: row;
+}
+
+.mdc-toolbar--flexible-space-minimized .toolbar-job-title h3 {
 }
 
 .mdc-toolbar--flexible-space-minimized .toolbar-avatar img {

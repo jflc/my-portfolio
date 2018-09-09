@@ -1,10 +1,10 @@
 <template>
 <div class="tech-skills">
-  <h1 class="mdc-typography--title">Tech Skills</h1>
+  <h1 class="mdc-typography--headline6">Tech Skills</h1>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner mdc-theme--primary" v-for="ts in techSkills.children">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2 class="mdc-typography--subheading2" v-text="ts.label"></h2>
+        <h2 class="mdc-typography--subtitle1" v-text="ts.label"></h2>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-typography--caption" v-for="item in ts.children">
         <span v-text="item.label"></span>

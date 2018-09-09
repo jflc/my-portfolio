@@ -29,7 +29,8 @@ export default {
 <style lang="scss">
 
 $mdc-theme-primary: #37474f;
-$mdc-theme-secondary: #546e7a;
+//$mdc-theme-secondary: #546e7a;
+$mdc-theme-secondary: #6e8e9e;
 $mdc-theme-background: #fff;
 
 @import "@material/typography/mdc-typography";
@@ -63,18 +64,23 @@ body {
 }
 
 .mdc-card__title {
-  @extend .mdc-typography--title;
+  @extend .mdc-typography--headline6;
   margin: 0px;
 }
 
 .mdc-card__subtitle {
-  @extend .mdc-typography--subheading1;
+  @extend .mdc-typography--subtitle1;
   margin: 0px;
 }
 
 .mdc-card__description {
   @extend .mdc-typography--body1;
   margin: 0px;
+}
+
+.content-title {
+    @extend .mdc-typography--headline4, .mdc-theme--text-secondary-on-light;
+    text-align: center;
 }
 
 @media print {

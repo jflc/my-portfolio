@@ -103,7 +103,7 @@ export default {
       .attr("r", (d) => d.r);
 
     leaf.append("text")
-      .attr("class", "mdc-typography--subheading2")
+      .attr("class", "mdc-typography--caption")
       .text((d) => d.text);
 
     leaf.exit().remove();
@@ -173,7 +173,7 @@ export default {
 }
 
 .node.mdc-theme--secondary text {
-    fill: var(--mdc-theme-text-secondary-on-secondary);
+    fill: var(--mdc-theme-text-secondary-on-light);
 }
 
 .node.mdc-theme--secondary-light circle {

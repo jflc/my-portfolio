@@ -1,6 +1,6 @@
 <template>
   <div class="work-experience">
-    <h1 class="mdc-typography--display1 mdc-theme--text-secondary-on-light">Work Experience</h1>
+    <h1 class="content-title">Work Experience</h1>
     <vertical-timeline :data="workExperience"></vertical-timeline>
   </div>
 </template>
@@ -44,9 +44,5 @@ export default {
 <style lang="scss">
 .work-experience {
   page-break-inside: avoid;
-}
-
-.work-experience > h1.mdc-typography--display1 {
-  text-align: center;
 }
 </style>

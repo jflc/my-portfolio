@@ -1,6 +1,6 @@
 <template>
   <div class="education">
-    <h1 class="mdc-typography--display1 mdc-theme--text-secondary-on-light">Education</h1>
+    <h1 class="content-title">Education</h1>
     <vertical-timeline :data="education"></vertical-timeline>
   </div>
 </template>

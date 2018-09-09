@@ -1,6 +1,6 @@
 <template>
   <div class="soft-skills">
-    <h1 class="mdc-typography--title">Soft Skills</h1>
+    <h1 class="mdc-typography--headline6">Soft Skills</h1>
     <div class="mdc-typography--caption">
       <bubble-chart :data="softSkills"></bubble-chart>
     </div>
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       softSkills: {
-        class: "mdc-theme--secondary-light",
+        class: "mdc-theme--secondary",
         children: [{
             label: "Teamwork"
           },
