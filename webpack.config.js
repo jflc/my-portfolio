@@ -82,7 +82,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|pdf)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'

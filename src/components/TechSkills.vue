@@ -32,15 +32,19 @@ export default {
               },
               {
                 label: "JavaScript",
-                value: 75,
+                value: 70,
               },
               {
                 label: "HTML/CSS",
-                value: 65,
+                value: 60,
               },
               {
                 label: "Bash/Shell",
                 value: 60
+              },
+              {
+                label: "Kotlin",
+                value: 55
               },
               {
                 label: "Python",
@@ -49,6 +53,10 @@ export default {
               {
                 label: "C/C++",
                 value: 25
+              },
+              {
+                label: "Rust",
+                value: 20
               }
             ]
           },
@@ -56,44 +64,59 @@ export default {
             label: "Frameworks/Tools",
             children: [{
                 label: "Java EE",
+                value: 80
+              },
+              {
+                label: "Spring",
                 value: 75
               },
               {
                 label: "JPA",
-                value: 65
+                value: 70
               },
               {
                 label: "Hibernate",
-                value: 45
+                value: 65
               },
               {
                 label: "JUnit",
-                value: 65
-              },
-
-              {
-                label: "SVN",
-                value: 65
+                value: 75
               },
               {
-                label: "Git",
-                value: 50,
+                label: "Bootstrap",
+                value: 60
               },
               {
                 label: "AngularJS",
-                value: 65
+                value: 60
+              },
+              {
+                label: "Vue.js",
+                value: 20
               },
               {
                 label: "jQuery",
                 value: 50
               },
               {
-                label: "Vue.js",
-                value: 15
+                label: "Git",
+                value: 75,
               },
               {
-                label: "Bootstrap",
+                label: "SVN",
                 value: 65
+              },
+              {
+                label: "Jenkins",
+                value: 65
+              },
+              {
+                label: "Docker",
+                value: 50
+              },
+              {
+                label: "PCF",
+                value: 60
               }
             ]
           },
@@ -104,12 +127,12 @@ export default {
                 value: 65,
               },
               {
-                label: "MySQL",
-                value: 45,
+                label: "PostgreSQL",
+                value: 60
               },
               {
-                label: "PostgreSQL",
-                value: 45
+                label: "MySQL",
+                value: 45,
               },
               {
                 label: "MongoDB",

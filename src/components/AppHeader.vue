@@ -2,7 +2,7 @@
 <header v-on:MDCToolbar:change="updateData" class="app-header mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible mdc-toolbar--flexible-default-behavior mdc-toolbar--flexible-space-maximized">
   <div class="mdc-toolbar__row">
     <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-      <div class="mdc-toolbar__title">
+      <div class="mdc-toolbar__title hide-on-print">
         <div class="toolbar-avatar">
           <img src="../assets/avatar.png" v-bind:style="{ opacity:  imgOpacity, margin: imgMargin }" />
         </div>
@@ -15,7 +15,7 @@
       </div>
     </section>
     <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-      <a href="/cv.pdf" class="hide-on-print material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
+      <a :href="cvFile" class="hide-on-print material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
     </section>
   </div>
 </header>
@@ -53,6 +53,11 @@ export default {
       const currentSubtitleSize = currentTitleSize * 0.6;
       vm.titleSize = `${currentTitleSize}rem`;
       vm.subtitleSize = `${currentSubtitleSize}rem`;
+    }
+  },
+  computed: {
+    cvFile () {
+      return require('../assets/cv.pdf')
     }
   },
   mounted() {

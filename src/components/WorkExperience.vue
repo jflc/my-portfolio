@@ -17,7 +17,7 @@ export default {
           startPoint: "Jan 2018",
           title: "Software Engineer",
           subTitle: '<a href="https://www.mercedes-benz.io/" target="_blank">Mercedes-Benz.io</a>',
-          description: '<p>Design, develop, test and deploy Mercedes-Benz digital products.</p><p>Main projects:</p><ul><li>Search Engine: Microservice that provides an API that gives the possibility to other systems store search query and notify the users every time that new entries are available;</li></ul>'
+          description: '<p>Design, develop, test and deploy Mercedes-Benz cloud applications.</p><p>Main projects:</p><ul><li>Search Engine: Microservice that provides an Rest API, used by other systems, to store search queries and notify the end users every time that new entries become available;</li></ul>'
         },
         {
           startPoint: "Jul 2014",
