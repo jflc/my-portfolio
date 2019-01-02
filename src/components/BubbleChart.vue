@@ -32,9 +32,6 @@ export default {
         .attr('r', d => d.r);
     }
   },
-  beforeUpdate() {
-    console.log("beforeUpdate")
-  },
   mounted() {
     let vm = this;
 
@@ -45,9 +42,7 @@ export default {
       .attr("width", '100%')
       .attr("height", '100%')
       .attr('viewBox','0 0 '+ width +' '+ height )
-      .attr('preserveAspectRatio','xMinYMin')
-      //.attr("width", width)
-      //.attr("height", height);
+      .attr('preserveAspectRatio','xMinYMin');
 
     let pack = d3.pack()
       .size([width, height])
@@ -55,35 +50,20 @@ export default {
 
     let root = d3.hierarchy(vm.data)
       .sum((d) => d.value || 1)
-      // .sort((a, b) => a.value - b.value)
       .each((d) => {
         d.text = d.data.label;
         d.class = d.data.class || (d.parent && d.parent.class);
       });
-    console.log('root: ', root);
 
     let nodes = pack(root).leaves();
     root.radial = root.r / 2;
     root.r = root.r - d3.max(nodes, d => d.r);
 
-    console.log('nodes: ', nodes);
-
     // use the force
-    let simulation = d3.forceSimulation(nodes)
-      // .velocityDecay(0.1)
-      // .alpha(0.5)
-      // .force('link', d3.forceLink().id(d => d.id))
-      // .force('charge', d3.forceManyBody())
+    d3.forceSimulation(nodes)
       .force('charge', d3.forceManyBody().strength(d => -vm.strength * Math.pow(d.r, 2.0)))
-      // .force('charge', d3.forceManyBody().strength(-10).distanceMin(10))
-      // .force("center", d3.forceCenter(center.x, center.y))
       .force('collide', d3.forceCollide(d => d.r))
-      // .force('collide', d3.forceCollide(d => d.r + vm.padding))
-      // .force('center', d3.forceCenter())
       .force('center', d3.forceRadial(root.radial, root.x, root.y))
-      // .force('center', d3.forceRadial(root.r, center.x, center.y).strength(vm.strength))
-      // .force('x', d3.forceX(center.x).strength(strength))
-      // .force('y', d3.forceY(center.y).strength(strength));
       .on('tick', () => this.updateNodes(leaf));
 
     let rootCircle = vm.svg.append("g")
@@ -96,8 +76,7 @@ export default {
       .attr("r", root.r);
 
     let leaf = vm.svg.selectAll(".node.node-leaf").data(nodes).enter().append("g")
-      .attr("class", (d) => "node node-leaf " + d.class)
-    // .attr("transform", (d) => "translate(" + d.x + "," + (d.y - vm.padding) + ")");
+      .attr("class", (d) => "node node-leaf " + d.class);
 
     leaf.append("circle")
       .attr("r", (d) => d.r);

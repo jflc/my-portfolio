@@ -23,12 +23,6 @@ export default {
       ]
     }
   },
-  mounted () {
-    let vm = this;
-  },
-  beforeDestroy () {
-    let vm = this;
-  },
   components: {VerticalTimeline}
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div class="card-grid mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" v-for="item in data">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" v-for="(item, index) in data" :key="index">
         <div class="mdc-card" >
           <section class="mdc-card__primary">
             <h2 class="mdc-card__title " v-html="item.title"></h2>
@@ -25,12 +25,6 @@ export default {
       type: Array,
       required: true
     }
-  },
-  mounted () {
-    let vm = this;
-  },
-  beforeDestroy () {
-    let vm = this;
   }
 }
 

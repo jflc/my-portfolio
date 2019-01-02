@@ -15,7 +15,7 @@
       </div>
     </section>
     <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
-      <a :href="cvFile" class="hide-on-print material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
+      <a :href="cvUrl" target="_blank" class="hide-on-print material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
     </section>
   </div>
 </header>
@@ -36,7 +36,8 @@ export default {
       nameMargin: 'auto 0em',
       jobOpacity: 1,
       titleSize: `${MDCToolbarFoundation.numbers.MAX_TITLE_SIZE}rem`,
-      subtitleSize: `${MDCToolbarFoundation.numbers.MAX_TITLE_SIZE*0.6}rem`
+      subtitleSize: `${MDCToolbarFoundation.numbers.MAX_TITLE_SIZE*0.6}rem`,
+      cvUrl: `${process.env.BASE_URL}cv.pdf`
     };
   },
   methods: {
@@ -53,11 +54,6 @@ export default {
       const currentSubtitleSize = currentTitleSize * 0.6;
       vm.titleSize = `${currentTitleSize}rem`;
       vm.subtitleSize = `${currentSubtitleSize}rem`;
-    }
-  },
-  computed: {
-    cvFile () {
-      return require('../assets/cv.pdf')
     }
   },
   mounted() {

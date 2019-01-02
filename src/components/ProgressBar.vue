@@ -12,7 +12,7 @@
 </template>
 
 <script lang="babel">
-import {MDCLinearProgress, MDCLinearProgressFoundation} from '@material/linear-progress';
+import {MDCLinearProgress} from '@material/linear-progress';
 
 export default {
   name: 'ProgressBar',

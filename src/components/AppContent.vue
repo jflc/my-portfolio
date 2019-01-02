@@ -5,7 +5,7 @@
 
   <br />
 
-  <education class="content-item"n></education>
+  <education class="content-item"></education>
 
   <hr />
 
@@ -34,12 +34,6 @@ export default {
   data() {
     return {
     }
-  },
-  mounted() {
-    let vm = this;
-  },
-  beforeDestroy() {
-    let vm = this;
   },
   components: {WorkExperience, Education, Certifications, PersonalProjects, AcademicProjects}
 }

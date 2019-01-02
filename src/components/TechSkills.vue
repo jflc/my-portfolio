@@ -2,11 +2,11 @@
 <div class="tech-skills">
   <h1 class="mdc-typography--headline6">Tech Skills</h1>
   <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner mdc-theme--primary" v-for="ts in techSkills.children">
+    <div class="mdc-layout-grid__inner mdc-theme--primary" v-for="(ts, i) in techSkills.children" :key="i">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 class="mdc-typography--subtitle1" v-text="ts.label"></h2>
       </div>
-      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-typography--caption" v-for="item in ts.children">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-typography--caption" v-for="(item, index) in ts.children" :key="index" >
         <span v-text="item.label"></span>
         <progress-bar :value="item.value"></progress-bar>
       </div>
@@ -92,7 +92,7 @@ export default {
               },
               {
                 label: "Vue.js",
-                value: 20
+                value: 25
               },
               {
                 label: "jQuery",

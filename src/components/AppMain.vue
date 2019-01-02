@@ -11,12 +11,6 @@ import AppContent from './AppContent.vue';
 
 export default {
   name: 'AppMain',
-  mounted () {
-    let vm = this;
-  },
-  beforeDestroy () {
-    let vm = this;
-  },
   components: {AppSide,AppContent}
 }
 

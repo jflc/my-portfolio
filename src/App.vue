@@ -16,12 +16,6 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  mounted () {
-    let vm = this;
-  },
-  beforeDestroy () {
-    let vm = this;
-  },
   components: {AppHeader,AppMain}
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
 <div class="vertical-timeline">
 
-  <div class="vertical-timeline-item" v-for="item in data">
+  <div class="vertical-timeline-item" v-for="(item, index) in data" :key="index" >
     <div class="vertical-timeline-date">
       <span v-text="item.endPoint"></span>
       <span v-text="item.startPoint"></span>
@@ -31,12 +31,6 @@ export default {
       type: Array,
       required: true
     }
-  },
-  mounted() {
-    let vm = this;
-  },
-  beforeDestroy() {
-    let vm = this;
   }
 }
 </script>
