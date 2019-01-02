@@ -1,23 +1,23 @@
 <template>
 <div class="content">
 
-  <work-experience class="content-item"></work-experience>
+  <work-experience class="content-item" :data="data.workExperience"></work-experience>
 
   <br />
 
-  <education class="content-item"></education>
+  <education class="content-item" :data="data.education"></education>
 
   <hr />
 
-  <certifications class="content-item"></certifications>
+  <certifications class="content-item" :data="data.certifications"></certifications>
 
   <br />
 
-  <personal-projects class="content-item"></personal-projects>
+  <personal-projects class="content-item" :data="data.personalProjects"></personal-projects>
 
   <br />
 
-  <academic-projects class="content-item"></academic-projects>
+  <academic-projects class="content-item" :data="data.academicProjects"></academic-projects>
 
 </div>
 </template>
@@ -31,8 +31,10 @@ import AcademicProjects from "./AcademicProjects.vue"
 
 export default {
   name: 'AppContent',
-  data() {
-    return {
+  props: {
+    data: {
+      type: Object,
+      required: true
     }
   },
   components: {WorkExperience, Education, Certifications, PersonalProjects, AcademicProjects}

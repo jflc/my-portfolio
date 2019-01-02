@@ -1,7 +1,7 @@
 <template>
   <div class="education">
     <h1 class="content-title">Education</h1>
-    <vertical-timeline :data="education"></vertical-timeline>
+    <vertical-timeline :data="data"></vertical-timeline>
   </div>
 </template>
 
@@ -10,17 +10,10 @@ import VerticalTimeline from './VerticalTimeline.vue';
 
 export default {
   name: 'Education',
-  data() {
-    return {
-      education: [
-        {
-          startPoint: "Sep 2007",
-          endPoint: "Jun 2013",
-          title: "Master's Degree in Computer Engineering and Telematics",
-          subTitle: "<a href='http://www.ua.pt' target≃'_blank'>University Of Aveiro</a>",
-          description: "<p>Master’s Thesis:</p><ul><li>Title: DETIboot;</li><li>Supervisors: Dr. José Manuel Neto Vieira, Dr. André Ventura da Cruz Marmôto Zúquete;</li><li>Description: Fast, wireless installation of pre-configured operating systems, with broadcast transmission and network coding (fountain codes), making it scalable for an unlimited number of consumer systems;</li><li>URL: <a href='http://hdl.handle.net/10773/11675' target='_blank'>http://hdl.handle.net/10773/11675</a></li></ul>"
-        }
-      ]
+  props: {
+    data: {
+      type: Array,
+      required: true
     }
   },
   components: {VerticalTimeline}

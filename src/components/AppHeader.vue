@@ -10,8 +10,8 @@
     </section>
     <section class="mdc-toolbar__section">
       <div class="mdc-toolbar__title toolbar-job-title" >
-        <h3 class="mdc-typography--headline6" v-bind:style="{ margin:  nameMargin, fontSize: titleSize }">João Cardoso</h3>
-        <div class="mdc-typography--subtitle1" v-bind:style="{ opacity:  jobOpacity, fontSize: subtitleSize }">Software Engineer</div>
+        <h3 class="mdc-typography--headline6" v-bind:style="{ margin:  nameMargin, fontSize: titleSize }" v-html="data.basic.name"></h3>
+        <div class="mdc-typography--subtitle1" v-bind:style="{ opacity:  jobOpacity, fontSize: subtitleSize }" v-html="data.basic.title"></div>
       </div>
     </section>
     <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
@@ -39,6 +39,12 @@ export default {
       subtitleSize: `${MDCToolbarFoundation.numbers.MAX_TITLE_SIZE*0.6}rem`,
       cvUrl: `${process.env.BASE_URL}cv.pdf`
     };
+  },
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
   },
   methods: {
     updateData: function (event) {

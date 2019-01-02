@@ -1,10 +1,10 @@
 <template>
 <div class="app-side mdc-drawer mdc-drawer--permanent">
-  <personal-info></personal-info>
+  <personal-info :data="data.basic"></personal-info>
   <hr />
-  <tech-skills></tech-skills>
+  <tech-skills :data="data.techSkills"></tech-skills>
   <hr />
-  <soft-skills></soft-skills>
+  <soft-skills :data="data.softSkills"></soft-skills>
 </div>
 </template>
 
@@ -15,9 +15,10 @@ import SoftSkills from './SoftSkills.vue';
 
 export default {
   name: 'AppSide',
-  data() {
-    return {
-
+  props: {
+    data: {
+      type: Object,
+      required: true
     }
   },
   components: {

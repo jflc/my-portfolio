@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <app-header></app-header>
-    <app-main></app-main>
+    <app-header :data="data"></app-header>
+    <app-main :data="data"></app-main>
   </div>
 </template>
 
 <script lang="babel">
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import Data from './assets/data.json'
 
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      data: Data
     }
   },
   components: {AppHeader,AppMain}

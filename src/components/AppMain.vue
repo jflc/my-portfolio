@@ -1,7 +1,7 @@
 <template>
   <main class="app-main">
-    <app-side></app-side>
-    <app-content></app-content>
+    <app-side :data="data"></app-side>
+    <app-content :data="data"></app-content>
   </main>
 </template>
 
@@ -11,6 +11,12 @@ import AppContent from './AppContent.vue';
 
 export default {
   name: 'AppMain',
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  },
   components: {AppSide,AppContent}
 }
 

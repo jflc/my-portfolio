@@ -2,7 +2,7 @@
   <div class="soft-skills">
     <h1 class="mdc-typography--headline6">Soft Skills</h1>
     <div class="mdc-typography--caption">
-      <bubble-chart :data="softSkills"></bubble-chart>
+      <bubble-chart :data="data"></bubble-chart>
     </div>
   </div>
 </template>
@@ -12,27 +12,10 @@ import BubbleChart from './BubbleChart.vue';
 
 export default {
   name: 'SoftSkills',
-  data() {
-    return {
-      softSkills: {
-        class: "mdc-theme--secondary",
-        children: [{
-            label: "Teamwork"
-          },
-          {
-            label: "Problem solving"
-          },
-          {
-            label: "Quick learner"
-          },
-          {
-            label: "Creative thinking"
-          },
-          {
-            label: "Time management"
-          }
-        ]
-      }
+  props: {
+    data: {
+      type: Object,
+      required: true
     }
   },
   components: {

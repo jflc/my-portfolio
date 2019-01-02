@@ -1,0 +1,230 @@
+{
+  "basic": {
+    "name": "João Cardoso",
+    "title": "Software Engineer",
+    "location": {
+      "name": "Lisbon, Portugal",
+      "link": "https://goo.gl/maps/bgMytTFEXy32"
+    },
+    "phoneNumber": "+351 968356501",
+    "email": "jflc@outlook.pt",
+    "linkedIn": "joaoflc",
+    "gitHub": "jflc"
+  },
+  "softSkills": {
+    "class": "mdc-theme--secondary",
+    "children": [{
+        "label": "Teamwork"
+      },
+      {
+        "label": "Problem solving"
+      },
+      {
+        "label": "Quick learner"
+      },
+      {
+        "label": "Creative thinking"
+      },
+      {
+        "label": "Time management"
+      }
+    ]
+  },
+  "techSkills": {
+    "class": "mdc-theme--primary-light",
+    "children": [{
+        "label": "Languages",
+        "children": [{
+            "label": "Java",
+            "value": 85
+          },
+          {
+            "label": "JavaScript",
+            "value": 70
+          },
+          {
+            "label": "HTML/CSS",
+            "value": 60
+          },
+          {
+            "label": "Bash/Shell",
+            "value": 60
+          },
+          {
+            "label": "Kotlin",
+            "value": 55
+          },
+          {
+            "label": "Python",
+            "value": 50
+          },
+          {
+            "label": "C/C++",
+            "value": 25
+          },
+          {
+            "label": "Rust",
+            "value": 20
+          }
+        ]
+      },
+      {
+        "label": "Frameworks/Tools",
+        "children": [{
+            "label": "Java EE",
+            "value": 80
+          },
+          {
+            "label": "Spring",
+            "value": 75
+          },
+          {
+            "label": "JPA",
+            "value": 70
+          },
+          {
+            "label": "Hibernate",
+            "value": 65
+          },
+          {
+            "label": "JUnit",
+            "value": 75
+          },
+          {
+            "label": "Bootstrap",
+            "value": 60
+          },
+          {
+            "label": "AngularJS",
+            "value": 60
+          },
+          {
+            "label": "Vue.js",
+            "value": 25
+          },
+          {
+            "label": "jQuery",
+            "value": 50
+          },
+          {
+            "label": "Git",
+            "value": 75
+          },
+          {
+            "label": "SVN",
+            "value": 65
+          },
+          {
+            "label": "Jenkins",
+            "value": 65
+          },
+          {
+            "label": "Docker",
+            "value": 50
+          },
+          {
+            "label": "PCF",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "label": "Databases",
+        "children": [{
+            "label": "Oracle",
+            "value": 65
+          },
+          {
+            "label": "PostgreSQL",
+            "value": 60
+          },
+          {
+            "label": "MySQL",
+            "value": 45
+          },
+          {
+            "label": "MongoDB",
+            "value": 25
+          }
+        ]
+      }
+    ]
+  },
+  "workExperience": [
+    {
+      "startPoint": "Jan 2018",
+      "title": "Software Engineer",
+      "subTitle": "<a href='https://www.mercedes-benz.io/' target='_blank'>Mercedes-Benz.io</a>",
+      "description": "<p>Design, develop, test and deploy Mercedes-Benz cloud applications.</p><p>Main projects:</p><ul><li>Search Engine: Microservice that provides an REST API, used by other systems, to store search queries and notify the end users every time that new entries become available;</li></ul>"
+    },
+    {
+      "startPoint": "Jul 2014",
+      "endPoint": "Dez 2017",
+      "title": "Java Developer",
+      "subTitle": "<a href='https://www.siemens.com' target='_blank'>Siemens S.A.</a>",
+      "description": "<p>Design, develop, test and deploy internal web applications used by Siemens employees all over the world.</p><p>Main projects:</p><ul><li>Delegation Management: System responsible for manage all delegations inside the company on all stages like order approval, income calculation, visa process, repatriation, etc;</li><li>Template Management: SaaS application responsible for manage email and document templates, proving dynamic document/email generation to all Siemens application through REST API;</li><li>Basic Components: Set of common back-end components used in all internal applications;</li><li>Web Components: Collaborative project between internal and external services, providing a framework used to build modern UI for web/mobile applications.</li></ul>"
+    },
+    {
+      "startPoint": "Jul 2013",
+      "endPoint": "Jun 2014",
+      "title": "Researcher",
+      "subTitle": "<a href='https://www.it.pt' target='_blank'>IT - Institute of Telecommunications (University of Aveiro)</a>",
+      "description": "<p>Designing and developing a ANDSF component belonging to the Evolved Packet Core (EPC) framework from 3GPP, deploy and integration of Hotspot 2.0, and making a seamless handover between 3G and WiFi technologies.</p>"
+    }
+  ],
+  "education": [
+    {
+      "startPoint": "Sep 2007",
+      "endPoint": "Jun 2013",
+      "title": "Master's Degree in Computer Engineering and Telematics",
+      "subTitle": "<a href='http://www.ua.pt' target≃'_blank'>University Of Aveiro</a>",
+      "description": "<p>Master’s Thesis:</p><ul><li>Title: DETIboot;</li><li>Supervisors: Dr. José Manuel Neto Vieira, Dr. André Ventura da Cruz Marmôto Zúquete;</li><li>Description: Fast, wireless installation of pre-configured operating systems, with broadcast transmission and network coding (fountain codes), making it scalable for an unlimited number of consumer systems;</li><li>URL: <a href='http://hdl.handle.net/10773/11675' target='_blank'>http://hdl.handle.net/10773/11675</a></li></ul>"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Oracle Certified Associate (OCA), Java SE 8 Programmer I",
+      "subTitle": "<a href='https://www.oracle.com' target≃'_blank'>Oracle</a>",
+      "description": "An Oracle Certified Associate, Java SE 8 Programmer has demonstrated knowledge of object-oriented concepts, the Java programming language and general knowledge of Java platforms and technologies."
+    },
+    {
+      "title": "Oracle Certified Professional (OCP), Java SE 8 Programmer II",
+      "subTitle": "<a href='https://www.oracle.com' target≃'_blank'>Oracle</a>",
+      "description": "An Oracle Certified Professional, Java SE 8 Programmer has validated their Java development skills by answering challenging, real-world, scenario-based questions that measure problem solving skills using Java code."
+    }
+  ],
+  "personalProjects": [
+    {
+      "title": "Desenrasca",
+      "subTitle": "(Android)",
+      "description": "Mobile application for Android devices, that gives to the users a more automatic and easy way of consume USSD codes services from their own mobile operators."
+    },
+    {
+      "title": "Pricematch",
+      "subTitle": "(Node.js/AngularJS)",
+      "description": "Responsive web application, developed according to service oriented architecture (SOA), that gives to the users the possibility of monitoring almost all the prices present in the internet web pages."
+    }
+  ],
+  "academicProjects": [
+    {
+      "title": "Spots4Surf",
+      "subTitle": "(Android)",
+      "description": "Mobile application, that gives to the users the opportunity to share and classify the current state of the waves, in some place, with all application users and with Facebook users."
+    },
+    {
+      "title": "UAllet",
+      "subTitle": "(Java/Python)",
+      "description": "Payment system services that gives to the users more detail information about the items of their buys and provides store prices, based on users purchases."
+    },
+    {
+      "title": "VitalResponder",
+      "subTitle": "(Java/Android)",
+      "description": "Coordination and monitoring system of the fireman's on risk interventions, using Vital Jacket and mobile devices."
+    },
+    {
+      "title": "UAccess Control",
+      "subTitle": "(C/Python)",
+      "description": "Web application to control and monitor the building users access using citizen cards."
+    }
+  ]
+}

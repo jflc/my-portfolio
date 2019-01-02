@@ -1,25 +1,25 @@
 <template>
 <div class="personal-info">
   <nav class="mdc-list">
-    <a class="mdc-list-item" :href="location.link" target="_blank" v-if="location">
+    <a class="mdc-list-item" :href="data.location.link" target="_blank" v-if="data.location">
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">location_city</i>
-      <span v-text="location.name"></span>
+      <span v-text="data.location.name"></span>
     </a>
-    <a class="mdc-list-item" v-if="phoneNumber">
+    <a class="mdc-list-item" v-if="data.phoneNumber">
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">phone</i>
-      <span v-text="phoneNumber"></span>
+      <span v-text="data.phoneNumber"></span>
     </a>
-    <a class="mdc-list-item" :href="'mailto:' + email" v-if="email">
+    <a class="mdc-list-item" :href="'mailto:' + data.email" v-if="data.email">
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
-      <span v-text="email"></span>
+      <span v-text="data.email"></span>
     </a>
-    <a class="mdc-list-item" :href="'https://www.linkedin.com/in/' + linkedIn" target="_blank" v-if="linkedIn">
+    <a class="mdc-list-item" :href="'https://www.linkedin.com/in/' + data.linkedIn" target="_blank" v-if="data.linkedIn">
       <i class="fa fa-linkedin fa-fw mdc-list-item__graphic" aria-hidden="true"></i>
-      <span v-text="linkedIn"></span>
+      <span v-text="data.linkedIn"></span>
     </a>
-    <a class="mdc-list-item" :href="'https://github.com/' + gitHub" target="_blank" v-if="gitHub">
+    <a class="mdc-list-item" :href="'https://github.com/' + data.gitHub" target="_blank" v-if="data.gitHub">
       <i class="fa fa-github fa-fw mdc-list-item__graphic" aria-hidden="true"></i>
-      <span v-text="gitHub"></span>
+      <span v-text="data.gitHub"></span>
     </a>
   </nav>
 </div>
@@ -28,16 +28,10 @@
 <script lang="babel">
 export default {
   name: 'PersonalInfo',
-  data() {
-    return {
-      location: {
-        name: "Lisbon, Portugal",
-        link: "https://goo.gl/maps/bgMytTFEXy32"
-      },
-      phoneNumber: "+351 968356501",
-      email: "jflc@outlook.pt",
-      linkedIn: "joaoflc",
-      gitHub: "jflc"
+  props: {
+    data: {
+      type: Object,
+      required: true
     }
   }
 }
