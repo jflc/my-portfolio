@@ -33,4 +33,8 @@ export default {
 <style lang="scss">
 @import '@material/layout-grid/mdc-layout-grid';
 @import '@material/card/mdc-card';
+
+.card-grid .mdc-card__description {
+  white-space: pre-line;
+}
 </style>
