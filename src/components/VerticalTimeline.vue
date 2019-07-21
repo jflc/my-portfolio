@@ -8,15 +8,7 @@
     </div>
     <div class="vertical-timeline-mark"></div>
     <div class="vertical-timeline-content">
-      <div class="mdc-card">
-        <section class="mdc-card__primary">
-          <h1 class="mdc-card__title" v-html="item.title"></h1>
-          <h2 class="mdc-card__subtitle" v-html="item.subTitle"></h2>
-        </section>
-        <section class="mdc-card__secondary">
-          <div class="mdc-card__description" v-html="item.description"></div>
-        </section>
-      </div>
+      <card-item :title="item.title" :subTitle="item.subTitle" :description="item.description" :tags="item.tags"></card-item>
     </div>
   </div>
 
@@ -24,6 +16,8 @@
 </template>
 
 <script lang="babel">
+import CardItem from './CardItem.vue';
+
 export default {
   name: 'VerticalTimeline',
   props: {
@@ -31,6 +25,9 @@ export default {
       type: Array,
       required: true
     }
+  },
+  components: {
+    CardItem
   }
 }
 </script>
@@ -57,6 +54,8 @@ export default {
 
 /* Container around content */
 .vertical-timeline-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
     display: flex;
     align-items: stretch;
     flex-direction: row;

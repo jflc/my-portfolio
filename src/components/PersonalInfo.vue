@@ -13,12 +13,16 @@
       <i class="material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
       <span v-text="data.email"></span>
     </a>
+    <a class="mdc-list-item" :href="'https://' + data.website" v-if="data.website">
+      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">link</i>
+      <span v-text="data.website"></span>
+    </a>
     <a class="mdc-list-item" :href="'https://www.linkedin.com/in/' + data.linkedIn" target="_blank" v-if="data.linkedIn">
-      <i class="fa fa-linkedin fa-fw mdc-list-item__graphic" aria-hidden="true"></i>
+      <i class="fab fa-linkedin fa-fw mdc-list-item__graphic" aria-hidden="true"></i>
       <span v-text="data.linkedIn"></span>
     </a>
     <a class="mdc-list-item" :href="'https://github.com/' + data.gitHub" target="_blank" v-if="data.gitHub">
-      <i class="fa fa-github fa-fw mdc-list-item__graphic" aria-hidden="true"></i>
+      <i class="fab fa-github fa-fw mdc-list-item__graphic" aria-hidden="true"></i>
       <span v-text="data.gitHub"></span>
     </a>
   </nav>
@@ -42,5 +46,16 @@ export default {
 
 .personal-info {
   page-break-inside: avoid;
+  break-inside: avoid;
 }
+
+.personal-info > .mdc-list > .mdc-list-item {
+  padding: 0px;
+  margin: 8px 0px;
+}
+
+.personal-info i {
+  font-size: 24px;
+}
+
 </style>

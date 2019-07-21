@@ -7,8 +7,10 @@
         <h2 class="mdc-typography--subtitle1" v-text="ts.label"></h2>
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-typography--caption" v-for="(item, index) in ts.children" :key="index" >
-        <span v-text="item.label"></span>
-        <progress-bar :value="item.value"></progress-bar>
+        <div>
+          <span v-text="item.label"></span>
+          <progress-bar :value="item.value"></progress-bar>
+        </div>
       </div>
     </div>
   </div>
@@ -35,7 +37,7 @@ export default {
 <style lang="scss">
 .tech-skills {
     page-break-inside: avoid;
-    margin: 0 16px;
+    break-inside: avoid;
 }
 
 .tech-skills .mdc-typography--title {

@@ -14,11 +14,11 @@ export default {
     },
     aspectRatio: {
       type: Number,
-      default: 4 / 3
+      default: 1
     },
     padding: {
       type: Number,
-      default: 2
+      default: 8
     },
     strength: {
       type: Number,
@@ -45,7 +45,7 @@ export default {
       .attr('preserveAspectRatio','xMinYMin');
 
     let pack = d3.pack()
-      .size([width, height])
+      .size([width-vm.padding, height-vm.padding])
       .padding(vm.padding);
 
     let root = d3.hierarchy(vm.data)
@@ -56,8 +56,8 @@ export default {
       });
 
     let nodes = pack(root).leaves();
-    root.radial = root.r / 2;
-    root.r = root.r - d3.max(nodes, d => d.r);
+    root.radial = (root.r / 2) - (vm.padding*2);
+    root.r = root.r - d3.max(nodes, d => d.r) - vm.padding;
 
     // use the force
     d3.forceSimulation(nodes)

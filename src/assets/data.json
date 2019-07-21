@@ -8,6 +8,7 @@
     },
     "phoneNumber": "+351 968356501",
     "email": "jflc@outlook.pt",
+    "website": "jflc.github.io/my-portfolio",
     "linkedIn": "joaoflc",
     "gitHub": "jflc"
   },
@@ -36,115 +37,98 @@
         "label": "Languages",
         "children": [{
             "label": "Java",
-            "value": 85
-          },
-          {
-            "label": "JavaScript",
-            "value": 70
-          },
-          {
-            "label": "HTML/CSS",
-            "value": 60
-          },
-          {
-            "label": "Bash/Shell",
-            "value": 60
+            "value": 9
           },
           {
             "label": "Kotlin",
-            "value": 55
+            "value": 8
+          },
+          {
+            "label": "Bash/Shell",
+            "value": 7
+          },
+          {
+            "label": "JavaScript",
+            "value": 6
+          },
+          {
+            "label": "HTML/CSS",
+            "value": 6
           },
           {
             "label": "Python",
-            "value": 50
+            "value": 5
           },
           {
-            "label": "C/C++",
-            "value": 25
+            "label": "Golang",
+            "value": 5
           },
           {
             "label": "Rust",
-            "value": 20
+            "value": 4
           }
         ]
       },
       {
-        "label": "Frameworks/Tools",
-        "children": [{
-            "label": "Java EE",
-            "value": 80
-          },
+        "label": "Frameworks",
+        "children": [
           {
             "label": "Spring",
-            "value": 75
+            "value": 9
           },
           {
-            "label": "JPA",
-            "value": 70
-          },
-          {
-            "label": "Hibernate",
-            "value": 65
-          },
-          {
-            "label": "JUnit",
-            "value": 75
-          },
-          {
-            "label": "Bootstrap",
-            "value": 60
-          },
-          {
-            "label": "AngularJS",
-            "value": 60
+            "label": "Java EE",
+            "value": 8
           },
           {
             "label": "Vue.js",
-            "value": 25
+            "value": 6
           },
           {
-            "label": "jQuery",
-            "value": 50
-          },
-          {
-            "label": "Git",
-            "value": 75
-          },
-          {
-            "label": "SVN",
-            "value": 65
-          },
-          {
-            "label": "Jenkins",
-            "value": 65
-          },
-          {
-            "label": "Docker",
-            "value": 50
-          },
-          {
-            "label": "PCF",
-            "value": 60
+            "label": "AngularJS",
+            "value": 5
           }
         ]
       },
       {
         "label": "Databases",
-        "children": [{
-            "label": "Oracle",
-            "value": 65
-          },
+        "children": [
           {
             "label": "PostgreSQL",
-            "value": 60
+            "value": 7
+          },
+          {
+            "label": "Oracle",
+            "value": 6
           },
           {
             "label": "MySQL",
-            "value": 45
+            "value": 4
           },
           {
             "label": "MongoDB",
-            "value": 25
+            "value": 3
+          }
+        ]
+      },
+      {
+        "label": "DevOps",
+        "children": [
+          {
+            "label": "Jenkins",
+            "value": 7
+          },
+          {
+            "label": "Docker",
+            "value": 6
+          },
+          {
+            "label": "Kubernetes",
+            "value": 5
+          },
+          {
+            "label": "PCF",
+            "value": 7
           }
         ]
       }
@@ -155,21 +139,24 @@
       "startPoint": "Jan 2018",
       "title": "Software Engineer",
       "subTitle": "<a href='https://www.mercedes-benz.io/' target='_blank'>Mercedes-Benz.io</a>",
-      "description": "<p>Design, develop, test and deploy Mercedes-Benz cloud applications.</p><p>Main projects:</p><ul><li>Search Engine: Microservice that provides an REST API, used by other systems, to store search queries and notify the end users every time that new entries become available;</li></ul>"
+      "description": "<p>Design, develop, test and deploy Mercedes-Benz cloud applications using microservices architecture.</p><p>Main projects:</p><ul> <li>Notification Center: Several microservices that work together in order to provide a seamless user experience in all platforms (e.g. Web, Mobile, Car, etc). These services are responsible to validate, control, render and delivery all user notifications, requested by other applications;</li><li>Search Engine: Microservice that provides an REST API, used by other systems, to store search queries and notify the end users every time that new entries become available;</li></ul>",
+      "tags": ["Java", "Kotlin", "Spring", "PostgreSQL", "Docker", "Kubernetes", "PCF", "Jenkins", "Git", "REST", "gRPC", "Maven", "Gradle"]
     },
     {
       "startPoint": "Jul 2014",
       "endPoint": "Dez 2017",
       "title": "Java Developer",
       "subTitle": "<a href='https://www.siemens.com' target='_blank'>Siemens S.A.</a>",
-      "description": "<p>Design, develop, test and deploy internal web applications used by Siemens employees all over the world.</p><p>Main projects:</p><ul><li>Delegation Management: System responsible for manage all delegations inside the company on all stages like order approval, income calculation, visa process, repatriation, etc;</li><li>Template Management: SaaS application responsible for manage email and document templates, proving dynamic document/email generation to all Siemens application through REST API;</li><li>Basic Components: Set of common back-end components used in all internal applications;</li><li>Web Components: Collaborative project between internal and external services, providing a framework used to build modern UI for web/mobile applications.</li></ul>"
+      "description": "<p>Design, develop, test and deploy internal web applications used by Siemens employees all over the world.</p><p>Main projects:</p><ul><li>Delegation Management: System responsible for manage all delegations inside the company on all stages like order approval, income calculation, visa process, repatriation, etc;</li><li>Template Management: SaaS application responsible for manage email and document templates, proving dynamic document/email generation to all Siemens application through REST API;</li><li>Basic Components: Set of common back-end components used in all internal applications;</li><li>Web Components: Collaborative project between internal and external services, providing a framework used to build modern UI for web/mobile applications.</li></ul>",
+      "tags": ["Java", "Java EE", "JSF", "AngularJS", "JBoss", "Oracle DB", "BPMN", "Jenkins", "SVN", "REST", "SOAP", "Maven"]
     },
     {
       "startPoint": "Jul 2013",
       "endPoint": "Jun 2014",
       "title": "Researcher",
       "subTitle": "<a href='https://www.it.pt' target='_blank'>IT - Institute of Telecommunications (University of Aveiro)</a>",
-      "description": "<p>Designing and developing a ANDSF component belonging to the Evolved Packet Core (EPC) framework from 3GPP, deploy and integration of Hotspot 2.0, and making a seamless handover between 3G and WiFi technologies.</p>"
+      "description": "<p>Designing and developing a ANDSF component belonging to the Evolved Packet Core (EPC) framework from 3GPP, deploy and integration of Hotspot 2.0, and making a seamless handover between 3G and WiFi technologies.</p>",
+      "tags": ["Java", "C/C++", "Play", "Maven"]
     }
   ],
   "education": [
@@ -201,35 +188,35 @@
   "personalProjects": [
     {
       "title": "Desenrasca",
-      "subTitle": "(Android)",
-      "description": "Mobile application for Android devices, that gives to the users a more automatic and easy way of consume USSD codes services from their own mobile operators."
+      "description": "Mobile application for Android devices, that gives to the users a more automatic and easy way of consume USSD codes services from their own mobile operators.",
+      "tags": ["Android", "Java", "SQLite", "Gradle"]
     },
     {
       "title": "Pricematch",
-      "subTitle": "(Node.js/AngularJS)",
-      "description": "Responsive web application, developed according to service oriented architecture (SOA), that gives to the users the possibility of monitoring almost all the prices present in the internet web pages."
+      "description": "Responsive web application, developed according to service oriented architecture (SOA), that gives to the users the possibility of monitoring almost all the prices present in the internet web pages.",
+      "tags": ["Node.js", "AngularJS", "MongoDB", "REST"]
     }
   ],
   "academicProjects": [
     {
       "title": "Spots4Surf",
-      "subTitle": "(Android)",
-      "description": "Mobile application, that gives to the users the opportunity to share and classify the current state of the waves, in some place, with all application users and with Facebook users."
+      "description": "Mobile application, that gives to the users the opportunity to share and classify the current state of the waves, in some place, with all application users and with Facebook users.",
+      "tags": ["Android", "Java", "SQLite", "Gradle"]
     },
     {
       "title": "UAllet",
-      "subTitle": "(Java/Python)",
-      "description": "Payment system services that gives to the users more detail information about the items of their buys and provides store prices, based on users purchases."
+      "description": "Payment system services that gives to the users more detail information about the items of their buys and provides store prices, based on users purchases.",
+      "tags": ["Java", "Python", "REST", "Google App Engine"]
     },
     {
       "title": "VitalResponder",
-      "subTitle": "(Java/Android)",
-      "description": "Coordination and monitoring system of the fireman's on risk interventions, using Vital Jacket and mobile devices."
+      "description": "Coordination and monitoring system of the fireman's on risk interventions, using Vital Jacket and mobile devices.",
+      "tags": ["Java", "Android", "GWT", "Maven"]
     },
     {
       "title": "UAccess Control",
-      "subTitle": "(C/Python)",
-      "description": "Web application to control and monitor the building users access using citizen cards."
+      "description": "Web application to control and monitor the building users access using citizen cards.",
+      "tags": ["C", "Python", "Google App Engine"]
     }
   ]
 }

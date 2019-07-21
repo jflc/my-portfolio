@@ -1,10 +1,10 @@
 <template>
 <div class="app-side mdc-drawer mdc-drawer--permanent">
-  <personal-info :data="data.basic"></personal-info>
-  <hr />
-  <tech-skills :data="data.techSkills"></tech-skills>
-  <hr />
-  <soft-skills :data="data.softSkills"></soft-skills>
+  <div class="app-side-content">
+    <personal-info :data="data.basic"></personal-info>
+    <tech-skills :data="data.techSkills"></tech-skills>
+    <soft-skills :data="data.softSkills"></soft-skills>
+  </div>
 </div>
 </template>
 
@@ -34,16 +34,21 @@ export default {
 // @import "@material/theme/mdc-theme";
 @import '@material/drawer/mdc-drawer';
 
-.app-side hr {
-    height: 0;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    margin: 16px 0;
+.app-side-content > * {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  margin: 0px;
+  padding: 16px 16px 32px 16px;
 }
 
-@media (min-width: 1025px) {
+.app-side-content > :not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 840px) {
   .app-side {
       width: 320px;
   }
 }
+
 </style>

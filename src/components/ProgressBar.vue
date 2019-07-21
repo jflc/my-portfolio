@@ -1,18 +1,25 @@
 <template>
-  <div role="progressbar" class="mdc-linear-progress">
-    <div class="mdc-linear-progress__buffering-dots"></div>
-    <div class="mdc-linear-progress__buffer"></div>
-    <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
-      <span class="mdc-linear-progress__bar-inner"></span>
-    </div>
-    <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
-      <span class="mdc-linear-progress__bar-inner"></span>
-    </div>
+<div class="mdc-slider mdc-slider--discrete mdc-slider--display-markers" tabindex="0" role="slider"
+     aria-valuemin="1" aria-valuemax="10" v-bind:aria-valuenow="value"
+     data-step="1" aria-label="Select Value" aria-disabled="true">
+  <div class="mdc-slider__track-container">
+    <div class="mdc-slider__track"></div>
+    <div class="mdc-slider__track-marker-container"></div>
   </div>
+  <div class="mdc-slider__thumb-container">
+    <div class="mdc-slider__pin">
+      <span class="mdc-slider__pin-value-marker"></span>
+    </div>
+    <svg class="mdc-slider__thumb" width="21" height="21">
+      <circle cx="10.5" cy="10.5" r="7.875"></circle>
+    </svg>
+    <div class="mdc-slider__focus-ring"></div>
+  </div>
+</div>
 </template>
 
 <script lang="babel">
-import {MDCLinearProgress} from '@material/linear-progress';
+import {MDCSlider} from '@material/slider';
 
 export default {
   name: 'ProgressBar',
@@ -21,22 +28,21 @@ export default {
       type: Number,
       required: true,
       validator(val) {
-        return val <= 100;
+        return val >= 1 && val <= 10;
       }
     }
   },
   mounted() {
     let vm = this;
-    vm.linearProgress = new MDCLinearProgress(vm.$el);
-    vm.linearProgress.progress = vm.value / 100.0;
+    vm.slider = new MDCSlider(vm.$el);
   },
   beforeDestroy() {
     let vm = this;
-    vm.linearProgress.destroy();
+    vm.slider.destroy();
   }
 }
 </script>
 
 <style lang="scss">
-@import '@material/linear-progress/mdc-linear-progress';
+@import '@material/slider/mdc-slider';
 </style>
