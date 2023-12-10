@@ -8,7 +8,7 @@
     </div>
     <div class="vertical-timeline-mark"></div>
     <div class="vertical-timeline-content">
-      <card-item :title="item.title" :subTitle="item.subTitle" :description="item.description" :tags="item.tags"></card-item>
+      <card-item :title="item.title" :subTitle="item.subTitle" :image="item.image" :description="item.description" :tags="item.tags"></card-item>
     </div>
   </div>
 

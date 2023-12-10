@@ -3,8 +3,8 @@
     "name": "João Cardoso",
     "title": "Software Engineer",
     "location": {
-      "name": "Lisbon, Portugal",
-      "link": "https://goo.gl/maps/bgMytTFEXy32"
+      "name": "Berlin, Germany",
+      "link": "https://maps.app.goo.gl/mhj8RfEg7csVmMi66"
     },
     "phoneNumber": "+351 968356501",
     "email": "jflc@outlook.pt",
@@ -60,12 +60,20 @@
             "value": 5
           },
           {
-            "label": "Golang",
+            "label": "Scala",
+            "value": 5
+          },
+          {
+            "label": "Ruby",
             "value": 5
           },
           {
             "label": "Rust",
             "value": 4
+          },
+          {
+            "label": "Golang",
+            "value": 3
           }
         ]
       },
@@ -73,20 +81,28 @@
         "label": "Frameworks",
         "children": [
           {
-            "label": "Spring",
+            "label": "Apollo",
             "value": 9
           },
           {
-            "label": "Java EE",
+            "label": "Spring Boot",
             "value": 8
           },
           {
+            "label": "Ruby on Rails",
+            "value": 7
+          },
+          {
+            "label": "Finagle",
+            "value": 7
+          },
+          {
             "label": "Vue.js",
-            "value": 6
+            "value": 5
           },
           {
             "label": "AngularJS",
-            "value": 5
+            "value": 3
           }
         ]
       },
@@ -98,15 +114,19 @@
             "value": 7
           },
           {
-            "label": "Oracle",
+            "label": "Bigtable",
             "value": 6
           },
           {
-            "label": "MySQL",
-            "value": 4
+            "label": "BigQuery",
+            "value": 6
           },
           {
             "label": "MongoDB",
+            "value": 4
+          },
+          {
+            "label": "Cassandra",
             "value": 3
           }
         ]
@@ -115,20 +135,24 @@
         "label": "DevOps",
         "children": [
           {
-            "label": "Jenkins",
-            "value": 7
-          },
-          {
             "label": "Docker",
-            "value": 6
+            "value": 8
           },
           {
             "label": "Kubernetes",
-            "value": 5
+            "value": 7
+          },
+          {
+            "label": "Google Cloud",
+            "value": 6
+          },
+          {
+            "label": "Jenkins",
+            "value": 6
           },
           {
             "label": "PCF",
-            "value": 7
+            "value": 4
           }
         ]
       }
@@ -136,17 +160,37 @@
   },
   "workExperience": [
     {
-      "startPoint": "Jan 2018",
+      "startPoint": "Sep 2021",
+      "title": "Senior Software Engineer",
+      "subTitle": "<a href='https://www.spotify.com' target='_blank'>Spotify</a>",
+      "image": "spotify-logo.png",
+      "description": "<p>Design, develop, test, deploy and maintain Spotify systems for ubiquity devices.</p><p>Main projects:</p><ul> <li>Mobile Ubiquity: Implement a view service to provide recommendations to Mobile Ubiquity integrations;</li><li>Client Token: Design a solution and help multiple teams across the org to integrate it into their systems to enable Spotify to obtain more information about the characteristics of users' devices;</li><li>Artist Wrapped: Implement the backend system to support the Spotify Wrapped campaign for artists;</li></ul>",
+      "tags": ["Java", "Scala", "Python", "TypeScript", "Bigtable", "Bigquery", "Google Cloud", "Docker", "Kubernetes", "Maven", "sbt", "Git", "REST", "gRPC", "Hermes", "Tableau", "Apollo"]
+    },
+    {
+      "startPoint": "Dec 2019",
+      "endPoint": "Aug 2021",
       "title": "Software Engineer",
-      "subTitle": "<a href='https://www.mercedes-benz.io/' target='_blank'>Mercedes-Benz.io</a>",
+      "subTitle": "<a href='https://soundcloud.com' target='_blank'>SoundCloud</a>",
+      "image": "soundcloud-logo.png",
+      "description": "<p>Design, develop, test, deploy and maintain SoundCloud payments systems, including managing  user subscriptions and entitlements.</p><p>Main projects:</p><ul> <li>Ruby on Rails migration: Migrate Ruby on Rails systems from version 4 to version 6;</li><li>Google Play Subscriptions: Integrate Google Play Subscription on SoundCloud payments systems;</li><li>Recurly: Integrate external payments provider Recurly on existing SoundCloud payments systems;</li></ul>",
+      "tags": ["Ruby on Rails", "Scala", "Finagle", "PostgreSQL", "Docker", "Kubernetes", "Git", "REST", "gRPC", "Maven", "sbt", "Bigquery", "Cassandra"]
+    },
+    {
+      "startPoint": "Jan 2018",
+      "endPoint": "Nov 2019",
+      "title": "Software Engineer",
+      "subTitle": "<a href='https://www.mercedes-benz.io' target='_blank'>Mercedes-Benz.io</a>",
+      "image": "mercedes-benzio-logo.png",
       "description": "<p>Design, develop, test and deploy Mercedes-Benz cloud applications using microservices architecture.</p><p>Main projects:</p><ul> <li>Notification Center: Several microservices that work together in order to provide a seamless user experience in all platforms (e.g. Web, Mobile, Car, etc). These services are responsible to validate, control, render and delivery all user notifications, requested by other applications;</li><li>Search Engine: Microservice that provides an REST API, used by other systems, to store search queries and notify the end users every time that new entries become available;</li></ul>",
-      "tags": ["Java", "Kotlin", "Spring", "PostgreSQL", "Docker", "Kubernetes", "PCF", "Jenkins", "Git", "REST", "gRPC", "Maven", "Gradle"]
+      "tags": ["Java", "Kotlin", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "PCF", "Jenkins", "Git", "REST", "gRPC", "Maven", "Gradle"]
     },
     {
       "startPoint": "Jul 2014",
-      "endPoint": "Dez 2017",
+      "endPoint": "Dec 2017",
       "title": "Java Developer",
       "subTitle": "<a href='https://www.siemens.com' target='_blank'>Siemens S.A.</a>",
+      "image": "siemens-logo.png",
       "description": "<p>Design, develop, test and deploy internal web applications used by Siemens employees all over the world.</p><p>Main projects:</p><ul><li>Delegation Management: System responsible for manage all delegations inside the company on all stages like order approval, income calculation, visa process, repatriation, etc;</li><li>Template Management: SaaS application responsible for manage email and document templates, proving dynamic document/email generation to all Siemens application through REST API;</li><li>Basic Components: Set of common back-end components used in all internal applications;</li><li>Web Components: Collaborative project between internal and external services, providing a framework used to build modern UI for web/mobile applications.</li></ul>",
       "tags": ["Java", "Java EE", "JSF", "AngularJS", "JBoss", "Oracle DB", "BPMN", "Jenkins", "SVN", "REST", "SOAP", "Maven"]
     },
@@ -155,6 +199,7 @@
       "endPoint": "Jun 2014",
       "title": "Researcher",
       "subTitle": "<a href='https://www.it.pt' target='_blank'>IT - Institute of Telecommunications (University of Aveiro)</a>",
+      "image": "institutotelecomunicacoes-logo.png",
       "description": "<p>Designing and developing a ANDSF component belonging to the Evolved Packet Core (EPC) framework from 3GPP, deploy and integration of Hotspot 2.0, and making a seamless handover between 3G and WiFi technologies.</p>",
       "tags": ["Java", "C/C++", "Play", "Maven"]
     }
@@ -164,6 +209,7 @@
       "startPoint": "Sep 2007",
       "endPoint": "Jun 2013",
       "title": "Master's Degree in Computer Engineering and Telematics",
+      "image": "universidade-aveiro-logo.png",
       "subTitle": "<a href='http://www.ua.pt' target≃'_blank'>University Of Aveiro</a>",
       "description": "<p>Master’s Thesis:</p><ul><li>Title: DETIboot;</li><li>Supervisors: Dr. José Manuel Neto Vieira, Dr. André Ventura da Cruz Marmôto Zúquete;</li><li>Description: Fast, wireless installation of pre-configured operating systems, with broadcast transmission and network coding (fountain codes), making it scalable for an unlimited number of consumer systems;</li><li>URL: <a href='http://hdl.handle.net/10773/11675' target='_blank'>http://hdl.handle.net/10773/11675</a></li></ul>"
     }
