@@ -11,6 +11,7 @@
 
   <certifications class="content-item" :data="data.certifications"></certifications>
 
+  <!--
   <br />
 
   <personal-projects class="content-item" :data="data.personalProjects"></personal-projects>
@@ -18,6 +19,7 @@
   <br />
 
   <academic-projects class="content-item" :data="data.academicProjects"></academic-projects>
+  -->
 
 </div>
 </template>
@@ -26,8 +28,8 @@
 import WorkExperience from "./WorkExperience.vue";
 import Education from "./Education.vue";
 import Certifications from "./Certifications.vue";
-import PersonalProjects from "./PersonalProjects.vue"
-import AcademicProjects from "./AcademicProjects.vue"
+// import PersonalProjects from "./PersonalProjects.vue"
+// import AcademicProjects from "./AcademicProjects.vue"
 
 export default {
   name: 'AppContent',
@@ -37,7 +39,8 @@ export default {
       required: true
     }
   },
-  components: {WorkExperience, Education, Certifications, PersonalProjects, AcademicProjects}
+  // components: {WorkExperience, Education, Certifications, PersonalProjects, AcademicProjects}
+  components: {WorkExperience, Education, Certifications}
 }
 </script>
 
