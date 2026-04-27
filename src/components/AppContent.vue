@@ -9,13 +9,13 @@
 
   <hr />
 
+  <personal-projects class="content-item" :data="data.personalProjects"></personal-projects>
+
+  <br />
+
   <certifications class="content-item" :data="data.certifications"></certifications>
 
   <!--
-  <br />
-
-  <personal-projects class="content-item" :data="data.personalProjects"></personal-projects>
-
   <br />
 
   <academic-projects class="content-item" :data="data.academicProjects"></academic-projects>
@@ -28,7 +28,7 @@
 import WorkExperience from "./WorkExperience.vue";
 import Education from "./Education.vue";
 import Certifications from "./Certifications.vue";
-// import PersonalProjects from "./PersonalProjects.vue"
+import PersonalProjects from "./PersonalProjects.vue"
 // import AcademicProjects from "./AcademicProjects.vue"
 
 export default {
@@ -40,7 +40,7 @@ export default {
     }
   },
   // components: {WorkExperience, Education, Certifications, PersonalProjects, AcademicProjects}
-  components: {WorkExperience, Education, Certifications}
+  components: {WorkExperience, Education, Certifications, PersonalProjects}
 }
 </script>
 

@@ -2,7 +2,7 @@
 <div class="mdc-card" >
   <section class="mdc-card__primary">
     <div class="mdc-card__image" v-if="image">
-      <img :src="toImageUrl(image)" />
+      <img :src="toImageUrl(image)"  alt="icon"/>
     </div>
     <div class="mdc-card__header">
       <h2 class="mdc-card__title " v-if="title" v-html="title"></h2>
@@ -24,7 +24,7 @@
 
 <script lang="babel">
 
-const requireImage = require.context('../assets', false, /.*\.png$/);
+const requireImage = require.context('../assets', false, /.*\.(png|webp)$/);
 
 export default {
   name: 'CardItem',
